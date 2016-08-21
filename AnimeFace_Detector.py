@@ -16,9 +16,9 @@ while (cv2.waitKey(1) != 27):
   
   if len(faces) > 0:
     for (x,y,w,h) in faces:
-    cv2.rectangle(img, (x,y), (x+w,y+h), (255,255,255), 2)
+      cv2.rectangle(img, (x,y), (x+w,y+h), (255,255,255), 2)
     
-    img = cv2.resize(img, (img.shape[1]/2,img.shape[0]/2))
-    cv2.imshow("res", img)
+  img = cv2.resize(img, (img.shape[1]/2,img.shape[0]/2))
+  cv2.imshow("res", img)
 
 cv2.destroyAllWindows()
