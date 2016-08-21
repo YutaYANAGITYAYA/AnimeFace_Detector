@@ -12,6 +12,7 @@ while (cv2.waitKey(1) != 27):
   img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
   
   gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+  gray = cv2.equalizeHist(gray)
   faces = cascade.detectMultiScale(gray, scaleFactor = 1.1, minNeighbors = 5, minSize = (100, 100))
   
   if len(faces) > 0:
